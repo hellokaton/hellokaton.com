@@ -1,0 +1,8 @@
+<section>
+  <h3 class="title">最近文章</h3>
+  <ul class="recent-post">
+    {% for post in site.posts limit:10 %}
+    <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | truncate:16 }}</a></li>
+    {% endfor %}
+  </ul>
+</section>

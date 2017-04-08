@@ -1,0 +1,38 @@
+<!--[if lt IE 9]>
+<div class="alert alert-warning">
+  <p>Your Internet Explorer is not supported. Please upgrade your Internet Explorer to version 9+, or use latest <a href="http://www.google.com/chrome/" target="_blank" class="alert-link">Google chrome</a>、<a href="http://www.mozilla.org/firefox/" target="_blank" class="alert-link">Mozilla Firefox</a>.</p>
+  <p>If you are using IE 9 or later, make sure you <a href="http://windows.microsoft.com/en-us/internet-explorer/use-compatibility-view#ie=ie-8" target="_blank" class="alert-link">turn off "Compatibility view"</a>.</p>
+</div>
+<![endif]-->
+<header class="header">
+  <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <div class="title"><a title="{{ site.title }}" href="/">{{ site.title }}</a></div>
+  <ul class="nav navbar-nav collapse navbar-collapse bs-navbar-collapse navbar-right">
+    
+    <li><a href="{{ '/archive.html' }}" title="归档"><span class='fa fa-archive fa-2x'></span></a></li>
+    <li><a href="{{ '/categories.html' }}" title="文章分类" rel="nofollow"><span class='fa fa-navicon fa-2x'></span></a></li>
+    <li><a href="{{ '/tags.html' }}" title="标签" rel="nofollow"><span class='fa fa-tags fa-2x'></span></a></li>
+    <li><a href="{{ '/about.html' }}" title="关于"><span class='fa fa-user fa-2x'></span></a></li>
+    {% if site.author.github %}
+    <li><a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github" rel="nofollow"><span class='fa fa-github fa-2x'></span></a></li>
+    {% endif %}
+    {% if site.author.googleplus %}
+    <li><a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+" rel="nofollow"><span class="fa fa-google-plus fa-2x"></span></a></li>
+    {% endif %}
+    {% if site.author.twitter %}
+    <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter" rel="nofollow"><span class="fa fa-twitter fa-2x"></span></a></li>
+    {% endif %}
+    {% if site.author.facebook %}
+    <li><a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook" rel="nofollow"><span class="fa fa-facebook fa-2x"></span></a></li>
+    {% endif %}
+    {% if site.author.weibo %}
+    <li><a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo" rel="nofollow"><span class="fa fa-weibo fa-2x"></span></a></li>
+    {% endif %}
+    
+    <li><a href="{{ '/rss.xml' }}" target="_blank" title="RSS" rel="nofollow"><span class='fa fa-rss fa-2x'></span></a></li>
+  </ul>
+</header>

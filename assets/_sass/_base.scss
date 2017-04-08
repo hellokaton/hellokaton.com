@@ -1,0 +1,35 @@
+/* define your color & font-family & font-size */
+
+/* font color */
+$base01: #535853;
+$base02: #506073;
+
+/*文章标题*/
+$base03: #222;
+$base04: chocolate;
+$base05: #555;
+$base06: moccasin;
+$base07: white;
+$base08: black;
+$base_font_color: #333;
+$base_href_color: #a50404;
+
+$alpha: 1/6;
+
+/* font-size */
+$font-size: 16px;
+$line-height: 1;
+
+/* font-family */
+@mixin sans-serif {
+  font-family: "PingFang SC", Tahoma, "Microsoft Yahei", sans-serif;
+}
+
+@mixin serif {
+  font-family: serif;
+}
+
+@mixin monospace {
+  color: #24292e;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}

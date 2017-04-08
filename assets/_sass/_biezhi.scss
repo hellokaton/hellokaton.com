@@ -1,0 +1,353 @@
+@import "base";
+@import "responsive";
+
+/* This is base content. */
+
+@mixin text-shadow {
+  text-shadow: 0 1px 0px $base07, 0 1px 1px rgba($base08, $alpha * 3);
+}
+
+body {
+  font-size: $font-size;
+  line-height: $line-height * 1.6;
+  color: lighten($base08, 10%);
+  word-break: break-all;
+  word-wrap: break-word;
+  background: darken($base07, 10%);
+  @include sans-serif;
+  * {
+    transition: all .2s;
+  }
+}
+
+a {
+  color: $base_href_color;
+  &:hover, &:focus {
+    color: darken($base05, 30%);
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: $font-size * 1.75;
+  color: $base01;
+}
+
+h2 {
+  font-size: $font-size * 1.5;
+  color: $base01;
+}
+
+h3 {
+  font-size: $font-size * 1.375;
+  color: $base01;
+}
+
+h4 {
+  font-size: $font-size * 1.125;
+  color: $base01;
+}
+
+h5 {
+  font-size: $font-size * 1;
+  color: $base01;
+}
+
+h6 {
+  font-size: $font-size * 0.75;
+  color: $base01;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  line-height: $line-height * 1.5;
+}
+
+hr {
+  border-color: lighten($base03, 10%);
+}
+
+.container{
+  margin-top: 20px;
+}
+
+.article-categories a{
+  color: $base_href_color;
+  &:hover, &:focus {
+    color: darken($base05, 30%);
+  }
+}
+
+.recent-post a{
+  color: #0a1473;
+  &:hover, &:focus {
+    color: darken($base05, 30%);
+  }
+}
+
+.header {
+  display: inline;
+  .title {
+    display: inline;
+    padding-left: 15px;
+    font-family: "Chancery", cursive, LiSu, sans-serif;
+    font-size: $font-size * 2.2;
+    @include text-shadow;
+    a {
+      color: darken($base05, 15%);
+      &:hover, &:focus {
+        color: darken($base05, 30%);
+      }
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+      a {
+        color: darken($base05, 15%);
+        @include text-shadow;
+        &:hover, &:focus {
+          color: darken($base05, 30%);
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  padding: 0 5px;
+}
+
+.wrapper {
+  display: block;
+  padding: 20px;
+  margin: 30px 0 15px;
+  margin-bottom: 30px;
+  background-color: rgba($base07, $alpha * 5);
+  border: 1px solid rgba($base08, $alpha);
+  box-shadow: 0 1px 10px rgba($base08, $alpha * 2);
+  .col-md-9 {
+    padding-left: 0;
+  }
+  .col-md-3 {
+    padding-right: 0;
+  }
+  .title {
+    color: lighten($base03, 10%);
+    a {
+      padding-right: 8px;
+      color: lighten($base03, 10%);
+      &:hover, &:focus {
+        color: $base03;
+      }
+    }
+  }
+  p {
+    color: #504c4c;
+  }
+  p, ol, ul, table {
+    code {
+      @include monospace;
+      padding: 3px;
+      margin: 0;
+      font-size: 85%;
+      background-color: rgba(27,31,35,0.05);
+      border-radius: 3px;
+    }
+  }
+  ul, ol {
+    padding: 15px;
+    padding-left: 25px;
+    li {
+        list-style-type: square;
+    }
+  }
+}
+
+time.small {
+  font-size: 50%;
+  color: darken($base07, 50% );
+}
+
+aside {
+  section {
+    form {
+      margin-top: 25px;
+    }
+  }
+}
+
+.timeline {
+  display: block;
+  .tl-year{
+    width: 200px;
+    text-align: center;
+    margin: 10px 0 10px -105px;
+    padding: 0 10px;
+    font-size: $font-size * 2;
+    background-color: $base06;
+    border: 1px solid rgba($base04, $alpha * 2);
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba($base04, $alpha);
+  }
+  .tl-month {
+    width: 60px;
+    height: 60px;
+    margin: 10px 0 10px -35px;
+    padding: 5px 0;
+    font-size: $font-size * 1.5;
+    text-align: center;
+    color: darken($base07, 10%);
+    background-color: $base03;
+    border: 1px solid rgba($base03, $alpha * 2);
+    box-shadow: 0 0 3px rgba($base03, $alpha);
+    border-radius: 50%;
+  }
+}
+
+.tag-box {
+  display: table;
+  list-style: none outside none;
+  li {
+    display: inline-block;
+    margin: 4px 8px;
+    line-height: $line-height * 2;
+    a {
+      padding: 2px 4px;
+      background-color: rgba(darken($base06, 30%), $alpha * 2);
+      box-shadow: 0 0px 4px rgba($base08, $alpha * 2);
+    }
+  }
+}
+
+pre {
+  border:none;
+  border-radius: 4px;
+  code {
+    @include monospace;
+    .err {
+      border-width: 0;
+    }
+  }
+}
+
+blockquote {
+  position: relative;
+  margin: 15px 10px;
+  background-color: rgba(lighten($base03, 10%), $alpha);
+  border-width: 1px 1px 1px 5px;
+  border-style: solid;
+  border-color: rgba($base03, $alpha * 2);
+  box-shadow: 0 0 3px rgba($base03, $alpha);
+  &:before, &:after {
+    content: "\201C";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 5px;
+    font-family: Times, serif;
+    font-size: $font-size * 2;
+    font-weight: bold;
+    color: rgba($base08, $alpha * 2);
+  }
+  &:before {
+    top: 0;
+    left: 0;
+  }
+  p {
+    padding-left: 5px;
+  }
+}
+
+table {
+  max-width: 95%;
+  margin-left: 1%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
+  box-shadow: 0 0 3px rgba(darken($base05, 15%), $alpha);
+  word-break: normal;
+  &:hover {
+    border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
+    box-shadow: 0 0 8px rgba(darken($base05, 15%), $alpha);
+  }
+  thead tr th {
+    vertical-align: bottom;
+    padding: 8px;
+    color: rgba(lighten($base05, 30%), $alpha * 5);
+    background-color: rgba(darken($base05, 30%), $alpha * 5);
+    border-width: 1px 1px 2px;
+    border-style: solid;
+    border-color: rgba(darken($base05, 15%), $alpha * 2);
+  }
+  tbody tr td {
+    vertical-align: middle;
+    padding: 8px;
+    border: 1px solid rgba(darken($base05, 15%), $alpha * 2);
+    &:hover {
+      background-color: rgba(darken($base05, 20%), $alpha * 2);
+    }
+  }
+  thead > tr {
+    background-color: rgba(darken($base07, 10%), $alpha * 2);
+  }
+  tbody > tr {
+    &:nth-child(2n+1) {
+      background-color: rgba(darken($base05, 15%), $alpha);
+    }
+  }
+  tbody tr {
+    background-color: rgba(darken($base07, 10%), $alpha);
+    &:hover {
+      background-color: rgba(darken($base05, 15%), $alpha * 2);
+    }
+  }
+}
+
+.navbar-toggle {
+  background-color: rgba(darken($base05, 15%), $alpha * 5);
+  &:hover, &:focus {
+    background-color: rgba(darken($base05, 30%), $alpha * 5);
+  }
+  .icon-bar {
+    background-color: rgba(darken($base07, 10%), $alpha * 5);
+  }
+}
+
+.btn-primary {
+  background-color: rgba(darken($base05, 15%), $alpha * 5);
+  border: 1px solid rgba(darken($base05, 30%), $alpha);
+  &:hover, &:focus {
+    background-color: rgba(darken($base05, 30%), $alpha * 5);
+  }
+}
+.btn-primary.disabled {
+  background-color: rgba(darken($base05, 15%), $alpha * 4);
+  border: 1px solid rgba(darken($base05, 30%), $alpha);
+}
+
+.previous > a, .next > a {
+  color: rgba(darken($base05, 15%), $alpha * 5);
+  &:hover, &:focus {
+    color: rgba(darken($base05, 30%), $alpha * 5);
+  }
+}
+
+img {
+  display: inherit;
+  max-width: 85%;
+  margin: 0 auto;
+  line-height: $line-height*1.4;
+  box-shadow: 0 0 1px $base07, 0 0 6px rgba($base08, $alpha * 3);
+}
+
+.footer {
+  display: block;
+  padding: 0 15px;
+  padding-bottom: 25px;
+  color: #555;
+  p {
+    line-height: $line-height;
+  }
+}
+

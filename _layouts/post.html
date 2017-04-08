@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+  <h3 class="title"> {{ page.title }} <time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h3>
+  {% if site.qrcode.name %}
+  <div id="code" class="qrcode visible-lg"></div>
+  {% endif %}
+  {{ content }}
+  <ul class="pager">
+    {% if page.previous %}
+    <li class="previous"><a  href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一篇</a></li>
+    {% else %}
+    <li class="previous disabled"><a href="#">&larr; 上一篇</a></li>
+    {% endif %}
+    {% if page.next %}
+    <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &rarr;</a></li>
+    {% else %}
+    <li class="next disabled"><a href="#">下一篇 &rarr;</a></li>
+    {% endif %}
+  </ul>
+
+{% include comments.html %}
+

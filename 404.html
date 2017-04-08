@@ -1,0 +1,39 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>没有找到该页面 - {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/images/favicon.png">
+
+    <script type="text/javascript">
+      function countDown(secs,surl){
+        //alert(surl);
+        var jumpto = document.getElementById('jumpto');
+        jumpto.innerHTML=secs;
+        if(--secs>0){
+          setTimeout("countDown("+secs+",'"+surl+"')",1000);
+        }
+        else{static
+          location.href=surl;
+        }
+      }
+    </script>
+
+    <style type="text/css">
+      .center { float: none; margin-left: auto; margin-right: auto; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1>404</h1>
+      <p>好像找不到这个页面</p>
+      <p><span id="jumpto" style="font-weight: bold"> 5 </span> 秒后返回到 <a href="/">{{ site.title }}</a> 首页</p>
+      <script type="text/javascript">countDown(5,'/');</script>
+      <p>点击 <a href="/" target="_parent"><span style="font-weight: bold">此处</span></a> 直接返回</p>
+    </div>
+  </body>
+</html>

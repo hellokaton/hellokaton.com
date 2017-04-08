@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="col-md-9">
+  {% for post in paginator.posts %}
+  <h2 class="title">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <time class="small">{{ post.date | date: "%Y.%m.%d" }}</time>
+  </h2>
+  {% if post.content contains "<!-- more -->" %}
+  {{ post.content | split:'<!-- more -->' | first }}
+  {% else %}
+  {{ post.content | strip_html | truncate:150 }}
+  {% endif %}
+  <div style="border-bottom: 2px solid #e6e6e6;"></div>
+  {% endfor %}
+  
+  <!-- Pagination links -->
+  <div class="pull-right" style="margin-top: 15px;">
+    {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <a class="btn btn-primary btn-sm" href="/">&laquo; 上一页</a>
+    {% else %}
+    <a class="btn btn-primary btn-sm" href="/page{{paginator.previous_page}}/">&laquo; 上一页</a>
+    {% endif %}
+    {% else %}
+    <a class="btn btn-primary btn-sm disabled">&laquo; 上一页</a>
+    {% endif %}
+    <a class="btn btn-primary btn-sm disabled">Page: {{paginator.page}} of {{paginator.total_pages}}</a></span>
+    {% if paginator.next_page %}
+    <a class="btn btn-primary btn-sm" href="/page{{paginator.next_page}}/">下一页 &raquo;</a>
+    <a class="btn btn-primary btn-sm" href="/page{{paginator.total_pages}}/">末页</a>
+    {% else if paginator.page == paginator.total_pages %}
+    <a class="btn btn-primary btn-sm disabled">下一页 &raquo;</a>
+    <a class="btn btn-primary btn-sm disabled">末页</a>
+    {% endif %}
+  </div>
+</div>
+<aside class="col-md-3 visible-lg visible-md">
+  {% include categories.html %}
+  {% include recent_post.html %}
+  {% include blogroll.html %}
+  {% include embedded.html %}
+</aside>

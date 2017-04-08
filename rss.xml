@@ -1,0 +1,33 @@
+---
+layout: null
+title: {{ page.title | xml_escscape }}
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <channel>
+        <title><![CDATA[{{ site.title }}]]></title>
+        <image>
+            <url>{{ site.assets_path }}/images/favicon.png</url>
+            <title><![CDATA[{{ site.title }}]]></title>
+            <link>{{ site.url }}</link>
+        </image>
+        <description><![CDATA[{{ site.description }}]]></description>
+        <link>{{ site.url }}</link>
+        <author>{{ site.author.name }}</author>
+        <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+        <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+        <ttl>1800</ttl>
+
+        {% for post in site.posts limit:10 %}
+        <item>
+            <title><![CDATA[{{ post.title }}]]></title>
+            <description>{{ post.content | xml_escape }}</description>
+            <link>{{ site.url }}{{ post.url }}</link>
+            <guid>{{ site.url }}{{ post.id }}</guid>
+            <category><![CDATA[{{ post.category }}]]></category>
+            <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

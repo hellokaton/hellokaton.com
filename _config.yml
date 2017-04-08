@@ -1,0 +1,46 @@
+# Site settings
+title: "王爵的技术博客"
+url: "//biezhi.github.io"
+
+author:
+    name: biezhi
+    github: biezhi
+    email: biezhi.me@gmail.com
+    twitter: biezhii
+    facebook:
+    googleplus:
+    weibo: biezhii
+atom_path: /atom.xml
+rss_path: /rss.xml
+
+markdown: kramdown
+kramdown:
+    input: GFM
+
+permalink: /:categories/:year-:month/:title.html
+
+gems: [jekyll-paginate]
+paginate: 6
+
+exclude: [Gemfile]
+assets_path: /assets
+sass:
+    sass_dir: assets/_sass
+    style: :compressed
+
+# 评论
+comments:
+    disqus:
+        shortname: biezhi
+
+# 博客内嵌twitter
+embedd:
+    twitter: biezhii
+
+# 是否开启instantclick
+instantclick: true
+
+# 网站统计分析
+baidu_tongji_id: 4a6f81f28097583a4e9bb0f40d415549
+google_analytics_id: UA-53476480-1
+

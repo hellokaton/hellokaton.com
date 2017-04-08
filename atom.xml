@@ -1,0 +1,31 @@
+---
+layout: null
+title : {{ page.title | xml_escape }}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>{{ site.title }}</title>
+    <image>
+        <url>{{ site.assets_path }}/images/favicon.png</url>
+    </image>
+    <link href="{{ site.url }}/{{ site.atom_path }}" rel="self"/>
+    <link href="{{ site.url }}"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}</id>
+    <author>
+        <name>{{ site.author.name }}</name>
+    </author>
+
+    {% for post in site.posts %}
+    <entry>
+        <title><![CDATA[{{ post.title | xml_escape }}]]></title>
+        <link href="{{ site.url }}{{ post.url }}"/>
+        <id>{{ site.url }}{{ post.id }}</id>
+        <content type="html">{{ post.content | strip_html | truncate:300 | xml_escape }}</content>
+        <category><![CDATA[{{ post.category }}]]></category>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+    </entry>
+    {% endfor %}
+
+</feed>

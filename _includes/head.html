@@ -1,0 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="renderer" content="webkit|ie-stand">
+  <meta name="author" content="biezhi">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  {% if site.author.name %}<meta name="author" content="{{ site.author.name }}">{% endif %}
+  
+  <!-- fav and touch icons  -->
+  <link rel="shortcut icon" href="{{ site.assets_path }}/images/favicon.ico">
+  <link rel="apple-touch-icon" href="{{ site.assets_path }}/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.assets_path }}/images/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.assets_path }}/images/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.assets_path }}/images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.assets_path }}/images/apple-touch-icon-180x180.png">
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html,'' }}">
+  <link rel="stylesheet" href="{{ site.assets_path }}/css/style.css" media="all">
+
+  <!-- atom & rss feed -->
+  <link href="{{ site.rss_path }}" type="application/rss+xml" rel="alternate" title="{{ site.title }} RSS Feed">
+  <link href="{{ site.atom_path }}" type="application/atom+xml" rel="alternate" title="{{ site.title }} ATOM Feed">
+  </head>

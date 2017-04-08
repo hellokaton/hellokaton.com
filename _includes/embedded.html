@@ -1,0 +1,7 @@
+{% if site.embedd.twitter %}
+<section>
+  <h3 class="title">推特TimeLine</h3>
+  <a class="twitter-timeline" href="https://twitter.com/{{ site.embedd.twitter }}" data-tweet-limit="3">Tweets by @{{ site.embedd.twitter }}</a> 
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+{% endif %}

@@ -63,7 +63,8 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 hr {
-  border-color: lighten($base03, 10%);
+  height: 2px;
+  color: #e6e6e6;
 }
 
 .container{
@@ -75,6 +76,10 @@ hr {
   &:hover, &:focus {
     color: darken($base05, 30%);
   }
+}
+
+article.wrapper{
+  padding: 30px;  
 }
 
 .recent-post a{
@@ -144,6 +149,11 @@ hr {
   }
   p {
     color: #504c4c;
+    img {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 3px;
+    }
   }
   p, ol, ul, table {
     code {
@@ -234,11 +244,12 @@ pre {
 blockquote {
   position: relative;
   margin: 15px 10px;
-  background-color: rgba(lighten($base03, 10%), $alpha);
-  border-width: 1px 1px 1px 5px;
+  background-color: #f3ffe0;
+  border-width: 0px 0px 0px 5px;
   border-style: solid;
-  border-color: rgba($base03, $alpha * 2);
-  box-shadow: 0 0 3px rgba($base03, $alpha);
+  border-color: rgb(23, 68, 22);
+  box-shadow: 0 0 3px rgb(53, 53, 53);
+    
   &:before, &:after {
     content: "\201C";
     position: absolute;

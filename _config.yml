@@ -23,9 +23,9 @@ gems: [jekyll-paginate]
 paginate: 6
 
 exclude: [Gemfile]
-assets_path: /assets
+assets_path: /static
 sass:
-    sass_dir: assets/_sass
+    sass_dir: static/_sass
     style: :compressed
 
 # 评论

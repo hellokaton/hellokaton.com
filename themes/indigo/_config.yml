@@ -1,6 +1,3 @@
-# hexo-theme-indigo
-# https://github.com/yscoder/hexo-theme-indigo
-
 # 添加新菜单项遵循以下规则
 # menu:
 #  link:               fontawesome图标，省略前缀，本主题前缀为 icon-，必须
@@ -70,10 +67,11 @@ show_last_updated: true
 share: true
 
 # 是否开启打赏，关闭 reward: false
-reward:
-  title: 谢谢大爷~
-  wechat: /img/wechat.jpg     #微信，关闭设为 false
-  alipay: /img/alipay.jpg     #支付宝，关闭设为 false
+reward: false
+#reward:
+#  title: 谢谢大爷~
+#  wechat: /img/wechat.jpg     #微信，关闭设为 false
+#  alipay: /img/alipay.jpg     #支付宝，关闭设为 false
 
 # 是否开启搜索
 search: true
@@ -150,5 +148,5 @@ cdn: true
 # 设置为 true 将使用 lightbox render 图片
 lightbox: true
 
-# icp备案号  ICP_license: 京ICP备1234556号-1
+# icp备案号
 ICP_license: false

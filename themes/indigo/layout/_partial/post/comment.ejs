@@ -1,0 +1,13 @@
+<% if(post.comments){ %>
+
+<%- partial('../plugins/disqus') %>
+
+<%- partial('../plugins/uyan') %>
+
+<%- partial('../plugins/wangyi-ygt', {
+    key: post.slug,
+    url: url
+}) %>
+
+<%- partial('../plugins/gitment') %>
+<%} %>

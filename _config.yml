@@ -75,6 +75,10 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: indigo
 
+marked:
+  gfm: true
+  breaks: false
+
 feed:
   type: atom
   path: atom.xml

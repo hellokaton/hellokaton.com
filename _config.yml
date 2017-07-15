@@ -104,4 +104,4 @@ jsonContent:
 deploy:
   type: git
   repo: https://github.com/biezhi/biezhi.github.io
-  branch: gh-pages
+  branch: master

@@ -2,7 +2,7 @@
 title: 跟上Java8系列文章 - 带你实战Java8
 date: 2017-07-16
 category: ["跟上Java8"]
-tags: ["Java8", "系列"]
+tags: ["Java8", "系列", "lambda", "stream-api"]
 ---
 
 <p class="tc">
@@ -29,7 +29,7 @@ Java8把函数式编程里一些最好的思想融入到大家熟知的Java语�
 ## 文章目录
 
 1. [跟上Java8 - 了解lambda](/2017/07/17/keep-up-with-java8-lambda.html)
-2. [跟上Java8 - stream入门与实战](/2017/07/18/keep-up-with-java8-stream.html)
+2. [跟上Java8 - Stream API快速入门](/2017/07/18/keep-up-with-java8-stream.html)
 3. [跟上Java8 - 函数式编程](/2017/07/19/keep-up-with-java8-functional-programming.html)
 4. [跟上Java8 - 日期和时间最实用技巧](/2017/07/20/keep-up-with-java8-datetime.html)
 5. [跟上Java8 - 你忽略了的新特性](/2017/07/21/keep-up-with-java8-features.html)

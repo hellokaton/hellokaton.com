@@ -80,7 +80,7 @@ reward: false
 search: true
 
 # 是否大屏幕下文章页隐藏导航
-hideMenu: false
+hideMenu: true
 
 # 是否开启toc
 # toc: false
@@ -88,7 +88,7 @@ toc:
   list_number: true  # 是否显示数字排序
 
 # 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
-postMessage: 此处先省略100字，等我想起来：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
+postMessage: 原创文章，转载请注明： 转载自<a href="http://biezhi.me" target="_blank">王爵的技术博客</a><br/>本文链接地址：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
 
 # 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1255152447
 cnzz: false

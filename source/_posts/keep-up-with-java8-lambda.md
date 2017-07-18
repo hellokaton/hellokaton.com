@@ -242,3 +242,5 @@ System.out.println(list);
 `Comparator.naturalOrder()`是一个自然排序的实现，这里可以自定义排序方案。
 你经常看到使用Java8操作集合的时候可以直接foreach的原因也是在`Iterable`接口中也新增了一个默认方法：`forEach` ，
 该方法功能和 for 循环类似，但是允许 用户使用一个`Lambda`表达式作为循环体。
+
+在后面的章节中我们再次通过案例来展示函数式编程的魅力 :)

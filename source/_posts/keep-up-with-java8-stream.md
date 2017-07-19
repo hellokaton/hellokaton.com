@@ -9,6 +9,8 @@ tags: ["Java8", "stream", "flatmap", "filter", "collect"]
 其对核心类库的改进也是关键的一部分，`Stream`是Java8种处理集合的抽象概念，
 它可以指定你希望对集合的操作，但是执行操作的时间交给具体实现来决定。
 
+<!-- more -->
+
 ## 为什么需要Stream?
 
 Java语言中集合是使用最多的API，几乎每个Java程序都会用到集合操作，
@@ -254,10 +256,101 @@ Property property = properties.stream()
 Java8提供了一个新的静态方法`comparingInt`，使用它可以方便地实现一个比较器。
 放在以前，我们需要比较两个对象的某项属性的值，现在只需要提供一个存取方法就够了。
 
-## 聚合操作
-
-
-
 ## 收集结果
 
+通常我们处理完流之后想查看一下结果，比如获取总数，转换结果，在前面的示例中你发现调用了
+`filter`、`map`之后没有下文了，后续的操作应该调用`Stream`中的`collect`方法完成。
+
+**获取距离我最近的2个店铺**
+
+```java
+List<Property> properties = properties.stream()
+            .sorted(Comparator.comparingInt(x -> x.distance))
+            .limit(2)
+            .collect(Collectors.toList());
+```
+
+**获取所有店铺的名称**
+
+```java
+List<String> names = properties.stream()
+                      .map(p -> p.name)
+                      .collect(Collectors.toList());
+```
+
+**获取每个店铺的价格等级**
+
+```java
+Map<String, Integer> map = properties.stream()
+        .collect(Collectors.toMap(Property::getName, Property::getPriceLevel));
+```
+
+**所有价格等级的店铺列表**
+
+```java
+Map<Integer, List<Property>> priceMap = properties.stream()
+                .collect(Collectors.groupingBy(Property::getPriceLevel));
+```
+
 ## 并行数据处理
+
+### 并行和并发
+
+并发是两个任务共享时间段，并行则是两个任务在同一时间发生，比如运行在多核CPU上。
+如果一个程序要运行两个任务，并且只有一个CPU给它们分配了不同的时间片，那么这就是并发，而不是并行。
+
+> 并行化是指为缩短任务执行时间，将一个任务分解成几部分，然后并行执行。
+
+这和顺序执行的任务量是一样的，区别就像用更多的马来拉车，花费的时间自然减少了。
+实际上，和顺序执行相比，并行化执行任务时，CPU承载的工作量更大。
+
+> 数据并行化是指将数据分成块，为每块数据分配单独的处理单元。
+
+还是拿马拉车那个例子打比方，就像从车里取出一些货物，放到另一辆车上，两辆马车都沿着同样的路径到达目的地。
+
+当需要在大量数据上执行同样的操作时，数据并行化很管用。
+它将问题分解为可在多块数据上求解的形式，然后对每块数据执行运算，最后将各数据块上得到的结果汇总，从而获得最终答案。
+
+人们经常拿任务并行化和数据并行化做比较，在任务并行化中，线程不同，工作各异。
+我们最常遇到的JavaEE应用容器便是任务并行化的例子之一，每个线程不光可以为不同用户服务，
+还可以为同一个用户执行不同的任务，比如登录或往购物车添加商品。
+
+### Stream并行流
+
+流使得计算变得容易，它的操作也非常简单，但你需要遵守一些约定。默认情况下我们使用集合的`stream`方法
+创建的是一个串行流，你有两种办法让他变成并行流。
+
+1. 调用`Stream`对象的`parallel`方法
+2. 创建流的时候调用`parallelStream`而不是`stream`方法
+
+我们来用具体的例子来解释串行和并行流
+
+**串行化计算**
+
+筛选出价格等级小于4，按照距离排序的2个店铺名
+
+```java
+properties.stream()
+            .filter(p -> p.priceLevel < 4)
+            .sorted(Comparator.comparingInt(Property::getDistance))
+            .map(Property::getName)
+            .limit(2)
+            .collect(Collectors.toList());
+```
+
+调用 parallelStream 方法即能并行处理
+
+```java
+properties.parallelStream()
+            .filter(p -> p.priceLevel < 4)
+            .sorted(Comparator.comparingInt(Property::getDistance))
+            .map(Property::getName)
+            .limit(2)
+            .collect(Collectors.toList());
+```
+
+读到这里，大家的第一反应可能是立即将手头代码中的`stream`方法替换为`parallelStream`方法，
+因为这样做简直太简单了！先别忙，为了将硬件物尽其用，利用好并行化非常重要，但流类库提供的数据并行化只是其中的一种形式。
+
+我们先要问自己一个问题：`并行化运行基于流的代码是否比串行化运行更快？`这不是一个简单的问题。
+回到前面的例子，哪种方式花的时间更多取决于串行或并行化运行时的环境。

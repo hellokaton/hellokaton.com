@@ -153,9 +153,7 @@ String content = Files.readAllLines(Paths.get("/home/biezhi/a.txt")).stream()
 
 JDK8也为我们提供了一些便捷的`Stream`相关类库:
 
-<p>
-    {% img image-bubble /static/img/article/java8-stream-class.png 320 500 java8提供的Stream类库 %}
-</p>
+{% image /static/img/article/java8-stream-class.png 320 500 java8提供的Stream类库 %}
 
 创建一个流是很简单的，下面我们试试用创建好的`Stream`做一些操作吧。
 
@@ -172,9 +170,7 @@ JDK8也为我们提供了一些便捷的`Stream`相关类库:
 `filter`看名字也知道是过滤的意思，我们通常在筛选数据的时候用到，频率非常高。
 `filter`方法的参数是`Predicate<T> predicate`即一个从`T`到boolean的函数。
 
-<p>
-    {% img image-bubble /static/img/article/java8-filter.png 300 200 %}
-</p>
+{% image /static/img/article/java8-filter.png 300 200 %}
 
 **筛选出距离我在1000米内的店铺**
 
@@ -194,9 +190,7 @@ properties.stream()
 
 有时候我们需要将流中处理的数据类型进行转换，这时候就可以使用`map`方法来完成，将流中的值转换为一个新的流。
 
-<p>
-    {% img image-bubble /static/img/article/java8-map.png 300 200 %}
-</p>
+{% image /static/img/article/java8-map.png 300 200 %}
 
 **列出所有店铺的名称**
 
@@ -212,9 +206,7 @@ properties.stream()
 
 有时候我们会遇到提取子流的操作，这种情况用的不多但是遇到`flatMap`将变得更容易处理。
 
-<p>
-    {% img image-bubble /static/img/article/java8-flatmap.png 300 200 %}
-</p>
+{% image /static/img/article/java8-flatmap.png 300 200 %}
 
 例如我们有一个`List<List<String>>`结构的数据：
 

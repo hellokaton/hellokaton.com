@@ -5,9 +5,7 @@ category: ["跟上Java8"]
 tags: ["Java8", "lambda", "functional-interface"]
 ---
 
-<p class="tc">
-    {% img image-bubble /static/img/article/lambda-expression.png 500 180 lambda-expression %}
-</p>
+{% image /static/img/article/lambda-expression.png 500 180 lambda表达式 %}
 
 从`java8`出现以来`lambda`是最重要的特性之一，它可以让我们用简洁流畅的代码完成一个功能。
 很长一段时间`java`被吐槽是冗余和缺乏函数式编程能力的语言，随着函数式编程的流行`java8`种也引入了
@@ -133,9 +131,7 @@ public class FunctionInterfaceDemo {
 
 实际上诸如上述例子中的接口，伟大的jdk设计者为我们准备了`java.util.function`包
 
-<div>
-    {% img image-bubble /static/img/article/java8-util-function-package.png 300 500 java8-util-function-package %}
-</div>
+{% image /static/img/article/java8-util-function-package.png 300 500 %}
 
 我们前面写的`Predicate`函数式接口也是JDK种的一个实现，他们大致分为以下几类：
 

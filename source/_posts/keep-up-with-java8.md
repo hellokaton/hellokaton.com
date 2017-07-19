@@ -5,9 +5,7 @@ category: ["跟上Java8"]
 tags: ["Java8", "系列", "lambda", "stream-api"]
 ---
 
-<p class="tc">
-    {% img image-bubble /static/img/article/java8-banner.png 500 300 java8 %}
-</p>
+{% image /static/img/article/java8-banner.png 500 300 开启Java8之路 %}
 
 `Java8`从`2014`年出现至今已经三年有余，这里发布的新功能是自Java1.0发布18年来最大变化的。
 没有去处任何API，我们仍然能兼容以前的代码，新功能中提供了更多的语法和设计，帮助开发者编写更清楚、简洁的代码。

@@ -13,18 +13,18 @@ const source = (path, cache, ext) => {
 hexo.extend.helper.register('theme_js', (path, cache) => source(path, cache, '.js'))
 hexo.extend.helper.register('theme_css', (path, cache) => source(path, cache, '.css'))
 
-function renderImage(src, alt = '', title = '') {
+function renderImage(src, width, height, alt = '', title = '') {
     return `<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="${src}" alt="${alt}" title="${title}">
+                    <img src="${src}" alt="${alt}" width="${width}" height="${height}" title="${title}">
                 </div>
                 <div class="image-caption">${title || alt}</div>
             </figure>`
 }
 
-hexo.extend.tag.register('image', ([src, alt = '', title = '']) => {
-    return hexo.theme.config.lightbox ? renderImage(src, alt, title) : `<img src="${src}" alt="${alt}" title="${title}">`
+hexo.extend.tag.register('image', ([src, width, height, alt = '', title = '']) => {
+    return hexo.theme.config.lightbox ? renderImage(src, width, height, alt, title) : `<img src="${src}" width="${width}" height="${height}" alt="${alt}" title="${title}">`
 })
 
 hexo.extend.filter.register('before_post_render', data => {

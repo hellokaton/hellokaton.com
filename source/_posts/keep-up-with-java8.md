@@ -37,8 +37,8 @@ Java8把函数式编程里一些最好的思想融入到大家熟知的Java语�
 5. [跟上Java8 - 你忽略了的新特性](/2017/07/21/keep-up-with-java8-features.html)
 6. [跟上Java8 - 使用lambda并发编程](/2017/07/22/keep-up-with-java8-concurrent.html)
 7. [跟上Java8 - 七七八八的黑科技](/2017/07/23/keep-up-with-java8-tips.html)
-9. [跟上Java8 - 七七八八的黑科技](/2017/07/23/keep-up-with-java8-tips.html)
-10. [跟上Java8 - 复杂一点的例子](/2017/07/24/keep-up-with-java8-complex-examples.html)
+8. [跟上Java8 - 七七八八的黑科技](/2017/07/23/keep-up-with-java8-tips.html)
+9. [跟上Java8 - 复杂一点的例子](/2017/07/24/keep-up-with-java8-complex-examples.html)
 
 ## 资料分享
 

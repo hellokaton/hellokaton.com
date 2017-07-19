@@ -14,6 +14,7 @@
     "hexo-generator-index": "^0.2.0",
     "hexo-generator-json-content": "^3.0.1",
     "hexo-generator-tag": "^0.2.0",
+    "hexo-github-card": "^1.0.2",
     "hexo-helper-qrcode": "^1.0.2",
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-less": "^0.2.0",

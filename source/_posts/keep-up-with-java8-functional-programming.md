@@ -5,12 +5,12 @@ category: ["跟上Java8"]
 tags: ["Java8", "函数式"]
 ---
 
-{% image /static/img/article/java8-function-programing.jpg 600 400 函数式编程 %}
-
 在前面的章节我们快速学习了`lambda`和`Stream`，本章节中我们来回顾和理解函数式编程的思想。
 我们不断的提及`函数式`这个名词，它指的是lambda吗？如果是这样，采用函数式编程能为你带来什么好处呢?
 
 <!-- more -->
+
+{% image /static/img/article/java8-function-programing.jpg 600 400 函数式编程 %}
 
 ## 函数式的思考
 

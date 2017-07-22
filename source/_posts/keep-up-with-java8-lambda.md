@@ -5,14 +5,14 @@ category: ["跟上Java8"]
 tags: ["Java8", "lambda", "functional-interface"]
 ---
 
-{% image /static/img/article/lambda-expression.png 500 180 lambda表达式 %}
-
 从`java8`出现以来`lambda`是最重要的特性之一，它可以让我们用简洁流畅的代码完成一个功能。
 很长一段时间`java`被吐槽是冗余和缺乏函数式编程能力的语言，随着函数式编程的流行`java8`种也引入了
 这种编程风格。在此之前我们都在写匿名内部类干这些事，但有时候这不是好的做法，本文中将介绍和使用`lambda`，
 带你体验函数式编程的魔力。
 
 <!-- more -->
+
+{% image /static/img/article/lambda-expression.png 500 180 lambda表达式 %}
 
 ## 什么是lambda?
 

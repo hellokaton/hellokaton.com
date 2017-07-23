@@ -2,7 +2,7 @@
 title: Mysql中的悲观锁和乐观锁
 date: 2017-07-26
 category: [mysql]
-tags: ["mysql", "悲观锁", "乐观锁"]
+tags: ["mysql", "悲观锁", "乐观锁", "行锁", "表锁"]
 ---
 
 我们经常会使用Mysql数据库，也可能会遇到事务相关的问题，

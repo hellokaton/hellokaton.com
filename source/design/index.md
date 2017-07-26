@@ -3,6 +3,16 @@ date: 2017
 -------------
 
 <div class="show-design">
+    <img src="/static/design/jungle_queen.png"/>
+    <img src="/static/design/party_dribble.png"/>
+</div>
+
+<div class="show-design">
+    <img src="/static/design/wjj-01.jpg"/>
+    <img src="/static/design/jeep.jpg"/>
+</div>
+
+<div class="show-design">
     <img src="/static/design/parrot.jpg"/>
     <img src="/static/design/cutting-block.png"/>
 </div>

@@ -36,7 +36,7 @@ try {
 
 这样无疑有些繁琐，而且`finally`块还有可能抛出异常。在JDK7种提出了`try-with-resources`机制，
 它规定你操作的类只要是实现了`AutoCloseable`接口就可以在`try`语句块退出的时候自动调用`close`
-方法关闭流资料。
+方法关闭流资源。
 
 ```java
 public static void tryWithResources() throws IOException {
@@ -60,7 +60,7 @@ try ( InputStream is  = new FileInputStream("/home/biezhi/a.txt");
 
 当然如果你使用的是非标准库的类也可以自定义`AutoCloseable`，只要实现其`close`方法即可。
 
-### catch多个Exception
+### 捕获多个Exception
 
 当我们在操作一个对象的时候，有时候它会抛出多个异常，像这样：
 
@@ -213,7 +213,7 @@ Files.write(Paths.get("/home/biezhi/b.txt"), "Hello JDK7!".getBytes(),
 
 > 默认情况Files类中的所有方法都会使用UTF-8编码进行操作，当你不愿意这么干的时候可以传递Charset参数进去变更。
 
-当前`Files`还有一些其他的常用方法:
+当然`Files`还有一些其他的常用方法:
 
 ```java
 InputStream ins  = Files.newInputStream(path);
@@ -298,7 +298,7 @@ String str = String.join(",", "a", "b", "c");
 **通用目标类型判断**
 
 Java8对泛型参数的推断进行了增强。相信你对Java8之前版本中的类型推断已经比较熟悉了。
-比如，Java中的方法`emptyList`方法定义如下：
+比如，Collections中的方法`emptyList`方法定义如下：
 
 ```java
 static <T> List<T> emptyList();
@@ -311,7 +311,7 @@ static <T> List<T> emptyList();
 List<Person> persons = Collections.<Person>emptyList();
 ```
 
-不过Java也可以推断泛型参数的类型，上面的代码和下面这段代码是等价的：
+不过编译器也可以推断泛型参数的类型，上面的代码和下面这段代码是等价的：
 
 ```java
 List<Person> persons = Collections.emptyList();
@@ -401,7 +401,10 @@ class Person{ }
 ```java
 public static void main(String[] args) {
     Basic[] basics = Person.class.getAnnotationsByType(Basic.class);
-    Arrays.asList(basics).forEach(a -> { System.out.println(a.name()); }); }
+    Arrays.asList(basics).forEach(a -> {
+        System.out.println(a.name());
+    });
+}
 ```
 
 ### Null检查

@@ -9,5 +9,5 @@ date: '2017'
 * [如梦技术](http://blog.dreamlu.net)
 * [JFinal社区](http://jfinalbbs.com)
 * [seoui](http://blog.seoui.com)
-* [UbuntuHOT](https://www.ubuntuhot.com)
+* [Data羊](http://www.datayang.com)
 

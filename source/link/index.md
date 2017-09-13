@@ -10,4 +10,6 @@ date: '2017'
 * [JFinal社区](http://jfinalbbs.com)
 * [seoui](http://blog.seoui.com)
 * [Data羊](http://www.datayang.com)
+* [HongQuan's Blog](https://www.devtool.top)
 
+经常更新博文可交换友链接

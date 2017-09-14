@@ -7,7 +7,6 @@ date: '2017'
 
 * [无闻](https://wuwen.org)
 * [如梦技术](http://blog.dreamlu.net)
-* [JFinal社区](http://jfinalbbs.com)
 * [seoui](http://blog.seoui.com)
 * [Data羊](http://www.datayang.com)
 * [HongQuan's Blog](https://www.devtool.top)

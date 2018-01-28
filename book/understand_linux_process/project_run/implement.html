@@ -1,0 +1,1027 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>代码实现 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../notice/" />
+    
+    
+    <link rel="prev" href="architecture.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../foreword/thanks.html">
+            
+                <a href="../foreword/thanks.html">
+            
+                    
+                    致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../foreword/overview.html">
+            
+                <a href="../foreword/overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../foreword/use_code.html">
+            
+                <a href="../foreword/use_code.html">
+            
+                    
+                    使用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../foreword/use_docker.html">
+            
+                <a href="../foreword/use_docker.html">
+            
+                    
+                    使用Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../process_basic/">
+            
+                <a href="../process_basic/">
+            
+                    
+                    进程基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../process_basic/what_is_process.html">
+            
+                <a href="../process_basic/what_is_process.html">
+            
+                    
+                    进程是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../process_basic/hello_world.html">
+            
+                <a href="../process_basic/hello_world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../process_basic/pid.html">
+            
+                <a href="../process_basic/pid.html">
+            
+                    
+                    PID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../process_basic/ppid.html">
+            
+                <a href="../process_basic/ppid.html">
+            
+                    
+                    PPID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../process_basic/use_pid.html">
+            
+                <a href="../process_basic/use_pid.html">
+            
+                    
+                    使用PID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../process_basic/process_name.html">
+            
+                <a href="../process_basic/process_name.html">
+            
+                    
+                    进程名字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../process_basic/argv.html">
+            
+                <a href="../process_basic/argv.html">
+            
+                    
+                    进程参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../process_basic/input_and_output.html">
+            
+                <a href="../process_basic/input_and_output.html">
+            
+                    
+                    输入与输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../process_basic/concurrent_and_parallel.html">
+            
+                <a href="../process_basic/concurrent_and_parallel.html">
+            
+                    
+                    并发与并行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../process_basic/the_more_the_better.html">
+            
+                <a href="../process_basic/the_more_the_better.html">
+            
+                    
+                    进程越多越好
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../process_basic/status.html">
+            
+                <a href="../process_basic/status.html">
+            
+                    
+                    进程状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../process_basic/exit_code.html">
+            
+                <a href="../process_basic/exit_code.html">
+            
+                    
+                    退出码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../process_basic/process_resource.html">
+            
+                <a href="../process_basic/process_resource.html">
+            
+                    
+                    进程资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../process_basic/deadlock.html">
+            
+                <a href="../process_basic/deadlock.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../process_basic/livelock.html">
+            
+                <a href="../process_basic/livelock.html">
+            
+                    
+                    活锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../process_basic/posix.html">
+            
+                <a href="../process_basic/posix.html">
+            
+                    
+                    POSIX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../process_basic/nohup.html">
+            
+                <a href="../process_basic/nohup.html">
+            
+                    
+                    Nohup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../process_basic/run_process.html">
+            
+                <a href="../process_basic/run_process.html">
+            
+                    
+                    运行进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../go_example/">
+            
+                <a href="../go_example/">
+            
+                    
+                    Go编程实例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../go_example/spawn.html">
+            
+                <a href="../go_example/spawn.html">
+            
+                    
+                    衍生新进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../go_example/exec.html">
+            
+                <a href="../go_example/exec.html">
+            
+                    
+                    执行外部程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../go_example/fork.html">
+            
+                <a href="../go_example/fork.html">
+            
+                    
+                    复制进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../process_advanced/">
+            
+                <a href="../process_advanced/">
+            
+                    
+                    进程进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../process_advanced/file_lock.html">
+            
+                <a href="../process_advanced/file_lock.html">
+            
+                    
+                    文件锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../process_advanced/orphan_process.html">
+            
+                <a href="../process_advanced/orphan_process.html">
+            
+                    
+                    孤儿进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../process_advanced/zombie_process.html">
+            
+                <a href="../process_advanced/zombie_process.html">
+            
+                    
+                    僵尸进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../process_advanced/daemon_process.html">
+            
+                <a href="../process_advanced/daemon_process.html">
+            
+                    
+                    守护进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../process_advanced/ipc.html">
+            
+                <a href="../process_advanced/ipc.html">
+            
+                    
+                    进程间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../process_advanced/signal.html">
+            
+                <a href="../process_advanced/signal.html">
+            
+                    
+                    信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../process_advanced/system_call.html">
+            
+                <a href="../process_advanced/system_call.html">
+            
+                    
+                    Linux系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../process_advanced/fd.html">
+            
+                <a href="../process_advanced/fd.html">
+            
+                    
+                    文件描述符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../process_advanced/epoll.html">
+            
+                <a href="../process_advanced/epoll.html">
+            
+                    
+                    Epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../process_advanced/share_memory.html">
+            
+                <a href="../process_advanced/share_memory.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../process_advanced/copy_on_write.html">
+            
+                <a href="../process_advanced/copy_on_write.html">
+            
+                    
+                    Copy On Write
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../process_advanced/cgroups.html">
+            
+                <a href="../process_advanced/cgroups.html">
+            
+                    
+                    Cgroups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../process_advanced/namespaces.html">
+            
+                <a href="../process_advanced/namespaces.html">
+            
+                    
+                    Namespaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    项目实例Run
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="architecture.html">
+            
+                <a href="architecture.html">
+            
+                    
+                    项目架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="implement.html">
+            
+                <a href="implement.html">
+            
+                    
+                    代码实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../notice/">
+            
+                <a href="../notice/">
+            
+                    
+                    注意事项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../notice/mkdir.html">
+            
+                <a href="../notice/mkdir.html">
+            
+                    
+                    创建目录权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../notice/sigkill.html">
+            
+                <a href="../notice/sigkill.html">
+            
+                    
+                    捕获SIGKILL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../notice/sendfile.html">
+            
+                <a href="../notice/sendfile.html">
+            
+                    
+                    Sendfile系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../reference/">
+            
+                <a href="../reference/">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../reference/book.html">
+            
+                <a href="../reference/book.html">
+            
+                    
+                    参考书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../reference/project.html">
+            
+                <a href="../reference/project.html">
+            
+                    
+                    项目学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../reference/thanks_again.html">
+            
+                <a href="../reference/thanks_again.html">
+            
+                    
+                    再次感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >代码实现</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x5B9E;&#x73B0;run">&#x5B9E;&#x73B0;Run</h2>
+<h2 id="&#x5B9E;&#x73B0;flock">&#x5B9E;&#x73B0;Flock</h2>
+<p>&#x524D;&#x9762;&#x63D0;&#x5230;&#x8FDB;&#x7A0B;&#x7684;&#x6587;&#x4EF6;&#x9501;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;Run&#x4E5F;&#x7528;&#x5230;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x8BD5;&#x60F3;&#x4E0B;&#x4EE5;&#x4E0B;&#x7684;&#x573A;&#x666F;&#x3002;</p>
+<p>&#x7528;&#x6237;A&#x6267;&#x884C;<code>run pt-summary</code>&#xFF0C;&#x7531;&#x4E8E;&#x672C;&#x5730;&#x5DF2;&#x7ECF;&#x7F13;&#x5B58;&#x4E86;&#x6240;&#x4EE5;&#x4F1A;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x672C;&#x5730;&#x7684;&#x811A;&#x672C;&#x3002;&#x540C;&#x65F6;&#x7528;&#x6237;B&#x6267;&#x884C;<code>run -u pt-summary</code>&#xFF0C;&#x52A0;&#x4E0A;<code>-u</code>&#x6216;&#x8005;<code>--update</code>&#x53C2;&#x6570;&#x540E;Run&#x4F1A;&#x4ECE;&#x8FDC;&#x7AEF;&#x4E0B;&#x8F7D;&#x5E76;&#x8FD0;&#x884C;&#x6700;&#x65B0;&#x7684;&#x811A;&#x672C;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x52A0;&#x6587;&#x4EF6;&#x9501;&#x7684;&#x8BDD;&#xFF0C;&#x7528;&#x6237;A&#x7684;&#x884C;&#x4E3A;&#x5C31;&#x4E0D;&#x53EF;&#x9884;&#x6D4B;&#x4E86;&#xFF0C;&#x800C;&#x6587;&#x4EF6;&#x9501;&#x5F88;&#x597D;&#x5F97;&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C01;&#x88C5;&#x4E86;&#x4EE5;&#x4E0B;&#x7684;&#x63A5;&#x53E3;&#x3002;</p>
+<pre><code class="lang-golang"><span class="hljs-keyword">var</span> lockFile *os.File
+
+<span class="hljs-comment">// Lock the file.</span>
+<span class="hljs-keyword">func</span> Flock(path <span class="hljs-keyword">string</span>) error {
+    <span class="hljs-keyword">return</span> fcntlFlock(syscall.F_WRLCK, path)
+}
+
+<span class="hljs-comment">// Unlock the file.</span>
+<span class="hljs-keyword">func</span> Funlock(path <span class="hljs-keyword">string</span>) error {
+    err := fcntlFlock(syscall.F_UNLCK)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+      <span class="hljs-keyword">return</span> err
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> lockFile.Close()
+    }
+}
+
+<span class="hljs-comment">// Control the lock of file.</span>
+<span class="hljs-keyword">func</span> fcntlFlock(lockType <span class="hljs-keyword">int16</span>, path ...<span class="hljs-keyword">string</span>) error {
+    <span class="hljs-keyword">var</span> err error
+    <span class="hljs-keyword">if</span> lockType != syscall.F_UNLCK {
+      mode := syscall.O_CREAT | syscall.O_WRONLY
+      mask := syscall.Umask(<span class="hljs-number">0</span>)
+      lockFile, err = os.OpenFile(path[<span class="hljs-number">0</span>], mode, <span class="hljs-number">0666</span>)
+      syscall.Umask(mask)
+      <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> err
+      }
+    }
+
+    lock := syscall.Flock_t{
+      Start:  <span class="hljs-number">0</span>,
+      Len:    <span class="hljs-number">1</span>,
+      Type:   lockType,
+      Whence: <span class="hljs-keyword">int16</span>(os.SEEK_SET),
+    }
+    <span class="hljs-keyword">return</span> syscall.FcntlFlock(lockFile.Fd(), syscall.F_SETLK, &amp;lock)
+}
+</code></pre>
+<p>&#x5728;&#x8FD0;&#x884C;&#x811A;&#x672C;&#x524D;&#x5C31;&#x8C03;&#x7528;&#x9501;&#x8FDB;&#x7A0B;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code>// Lock the script.
+lockPath := cacheDir + &quot;.lock&quot;
+err = flock.Flock(lockPath)
+if err != nil {
+  utils.LogError(&quot;%s: %v\n&quot;, lockPath, err)
+  os.Exit(1)
+}
+</code></pre><h2 id="&#x5B9E;&#x73B0;http&#x8BF7;&#x6C42;">&#x5B9E;&#x73B0;HTTP&#x8BF7;&#x6C42;</h2>
+<p>&#x4F7F;&#x7528;Run&#x65F6;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x4ECE;&#x7F51;&#x4E0A;&#x4E0B;&#x8F7D;&#x811A;&#x672C;&#xFF0C;&#x8D70;&#x7684;HTTP&#x534F;&#x8BAE;&#xFF0C;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-golang"><span class="hljs-comment">// Retrieve a file via HTTP GET.</span>
+<span class="hljs-keyword">func</span> Fetch(url <span class="hljs-keyword">string</span>, path <span class="hljs-keyword">string</span>) error {
+  response, err := http.Get(url)
+  <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+    <span class="hljs-keyword">return</span> err
+  }
+  <span class="hljs-keyword">if</span> response.StatusCode != <span class="hljs-number">200</span> {
+    <span class="hljs-keyword">return</span> Errorf(<span class="hljs-string">&quot;%s: %s&quot;</span>, response.Status, url)
+  }
+
+  <span class="hljs-keyword">defer</span> response.Body.Close()
+  body, err := ioutil.ReadAll(response.Body)
+  <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+    <span class="hljs-keyword">return</span> err
+  }
+  <span class="hljs-keyword">if</span> strings.HasPrefix(url, MASTER_URL) {
+    <span class="hljs-comment">// When fetching run.conf, etc.</span>
+    <span class="hljs-keyword">return</span> ioutil.WriteFile(path, body, <span class="hljs-number">0644</span>)
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// When fetching scripts.</span>
+      <span class="hljs-keyword">return</span> ioutil.WriteFile(path, body, <span class="hljs-number">0777</span>)
+    }
+}
+<span class="hljs-string">`
+</span></code></pre>
+<p>Run&#x7684;&#x603B;&#x4F53;&#x4EE3;&#x7801;&#x662F;&#x5F88;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;&#x89E3;&#x6790;run.conf&#x4E0B;&#x8F7D;&#x76F8;&#x5E94;&#x7684;&#x811A;&#x672C;&#x5E76;&#x6267;&#x884C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="architecture.html" class="navigation navigation-prev " aria-label="Previous page: 项目架构">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../notice/" class="navigation navigation-next " aria-label="Next page: 注意事项">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"代码实现","level":"1.5.2","depth":2,"next":{"title":"注意事项","level":"1.6","depth":1,"path":"notice/README.md","ref":"notice/README.md","articles":[{"title":"创建目录权限","level":"1.6.1","depth":2,"path":"notice/mkdir.md","ref":"notice/mkdir.md","articles":[]},{"title":"捕获SIGKILL","level":"1.6.2","depth":2,"path":"notice/sigkill.md","ref":"notice/sigkill.md","articles":[]},{"title":"Sendfile系统调用","level":"1.6.3","depth":2,"path":"notice/sendfile.md","ref":"notice/sendfile.md","articles":[]}]},"previous":{"title":"项目架构","level":"1.5.1","depth":2,"path":"project_run/architecture.md","ref":"project_run/architecture.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"project_run/implement.md","mtime":"2018-01-28T13:39:42.926Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-01-28T13:56:38.461Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

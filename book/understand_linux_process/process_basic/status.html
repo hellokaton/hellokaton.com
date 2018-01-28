@@ -1,0 +1,987 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>进程状态 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="exit_code.html" />
+    
+    
+    <link rel="prev" href="the_more_the_better.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../foreword/thanks.html">
+            
+                <a href="../foreword/thanks.html">
+            
+                    
+                    致谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../foreword/overview.html">
+            
+                <a href="../foreword/overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../foreword/use_code.html">
+            
+                <a href="../foreword/use_code.html">
+            
+                    
+                    使用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../foreword/use_docker.html">
+            
+                <a href="../foreword/use_docker.html">
+            
+                    
+                    使用Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    进程基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="what_is_process.html">
+            
+                <a href="what_is_process.html">
+            
+                    
+                    进程是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="hello_world.html">
+            
+                <a href="hello_world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="pid.html">
+            
+                <a href="pid.html">
+            
+                    
+                    PID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="ppid.html">
+            
+                <a href="ppid.html">
+            
+                    
+                    PPID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="use_pid.html">
+            
+                <a href="use_pid.html">
+            
+                    
+                    使用PID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="process_name.html">
+            
+                <a href="process_name.html">
+            
+                    
+                    进程名字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="argv.html">
+            
+                <a href="argv.html">
+            
+                    
+                    进程参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="input_and_output.html">
+            
+                <a href="input_and_output.html">
+            
+                    
+                    输入与输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="concurrent_and_parallel.html">
+            
+                <a href="concurrent_and_parallel.html">
+            
+                    
+                    并发与并行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="the_more_the_better.html">
+            
+                <a href="the_more_the_better.html">
+            
+                    
+                    进程越多越好
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.11" data-path="status.html">
+            
+                <a href="status.html">
+            
+                    
+                    进程状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="exit_code.html">
+            
+                <a href="exit_code.html">
+            
+                    
+                    退出码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="process_resource.html">
+            
+                <a href="process_resource.html">
+            
+                    
+                    进程资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="deadlock.html">
+            
+                <a href="deadlock.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="livelock.html">
+            
+                <a href="livelock.html">
+            
+                    
+                    活锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="posix.html">
+            
+                <a href="posix.html">
+            
+                    
+                    POSIX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="nohup.html">
+            
+                <a href="nohup.html">
+            
+                    
+                    Nohup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="run_process.html">
+            
+                <a href="run_process.html">
+            
+                    
+                    运行进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../go_example/">
+            
+                <a href="../go_example/">
+            
+                    
+                    Go编程实例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../go_example/spawn.html">
+            
+                <a href="../go_example/spawn.html">
+            
+                    
+                    衍生新进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../go_example/exec.html">
+            
+                <a href="../go_example/exec.html">
+            
+                    
+                    执行外部程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../go_example/fork.html">
+            
+                <a href="../go_example/fork.html">
+            
+                    
+                    复制进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../process_advanced/">
+            
+                <a href="../process_advanced/">
+            
+                    
+                    进程进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../process_advanced/file_lock.html">
+            
+                <a href="../process_advanced/file_lock.html">
+            
+                    
+                    文件锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../process_advanced/orphan_process.html">
+            
+                <a href="../process_advanced/orphan_process.html">
+            
+                    
+                    孤儿进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../process_advanced/zombie_process.html">
+            
+                <a href="../process_advanced/zombie_process.html">
+            
+                    
+                    僵尸进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../process_advanced/daemon_process.html">
+            
+                <a href="../process_advanced/daemon_process.html">
+            
+                    
+                    守护进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../process_advanced/ipc.html">
+            
+                <a href="../process_advanced/ipc.html">
+            
+                    
+                    进程间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../process_advanced/signal.html">
+            
+                <a href="../process_advanced/signal.html">
+            
+                    
+                    信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../process_advanced/system_call.html">
+            
+                <a href="../process_advanced/system_call.html">
+            
+                    
+                    Linux系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../process_advanced/fd.html">
+            
+                <a href="../process_advanced/fd.html">
+            
+                    
+                    文件描述符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../process_advanced/epoll.html">
+            
+                <a href="../process_advanced/epoll.html">
+            
+                    
+                    Epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../process_advanced/share_memory.html">
+            
+                <a href="../process_advanced/share_memory.html">
+            
+                    
+                    共享内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../process_advanced/copy_on_write.html">
+            
+                <a href="../process_advanced/copy_on_write.html">
+            
+                    
+                    Copy On Write
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../process_advanced/cgroups.html">
+            
+                <a href="../process_advanced/cgroups.html">
+            
+                    
+                    Cgroups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../process_advanced/namespaces.html">
+            
+                <a href="../process_advanced/namespaces.html">
+            
+                    
+                    Namespaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../project_run/">
+            
+                <a href="../project_run/">
+            
+                    
+                    项目实例Run
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../project_run/architecture.html">
+            
+                <a href="../project_run/architecture.html">
+            
+                    
+                    项目架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../project_run/implement.html">
+            
+                <a href="../project_run/implement.html">
+            
+                    
+                    代码实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../notice/">
+            
+                <a href="../notice/">
+            
+                    
+                    注意事项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../notice/mkdir.html">
+            
+                <a href="../notice/mkdir.html">
+            
+                    
+                    创建目录权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../notice/sigkill.html">
+            
+                <a href="../notice/sigkill.html">
+            
+                    
+                    捕获SIGKILL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../notice/sendfile.html">
+            
+                <a href="../notice/sendfile.html">
+            
+                    
+                    Sendfile系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../reference/">
+            
+                <a href="../reference/">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../reference/book.html">
+            
+                <a href="../reference/book.html">
+            
+                    
+                    参考书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../reference/project.html">
+            
+                <a href="../reference/project.html">
+            
+                    
+                    项目学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../reference/thanks_again.html">
+            
+                <a href="../reference/thanks_again.html">
+            
+                    
+                    再次感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >进程状态</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x8FDB;&#x7A0B;&#x72B6;&#x6001;">&#x8FDB;&#x7A0B;&#x72B6;&#x6001;</h2>
+<p>&#x6839;&#x636E;&#x8FDB;&#x7A0B;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x8FDB;&#x7A0B;&#x662F;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x7684;&#x5B9E;&#x4F53;&#xFF0C;&#x800C;&#x8FDB;&#x7A0B;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x5DF2;&#x7ECF;&#x505C;&#x6B62;&#x7684;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x8FDB;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x7F51;&#x4E0A;&#x6709;&#x4EBA;&#x603B;&#x7ED3;&#x8FDB;&#x7A0B;&#x4E00;&#x5171;5&#x79CD;&#x72B6;&#x6001;&#xFF0C;&#x4E5F;&#x6709;&#x603B;&#x7ED3;&#x662F;8&#x79CD;&#xFF0C;&#x7A76;&#x7ADF;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x7B97;&#x5462;&#xFF0C;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x8FD8;&#x662F;&#x770B;Linux&#x6E90;&#x7801;&#x3002;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x7684;&#x5B9A;&#x4E49;&#x5728;<a href="https://github.com/torvalds/linux/blob/b6da0076bab5a12afb19312ffee41c95490af2a0/fs/proc/array.c" target="_blank">fs/proc/array.c</a>&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+* The task state array is a strange &quot;bitmap&quot; of
+* reasons to sleep. Thus &quot;running&quot; is zero, and
+* you can test for combinations of others with
+* simple bit tests.
+*/</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * <span class="hljs-keyword">const</span> task_state_array[] = {
+  <span class="hljs-string">&quot;R (running)&quot;</span>,        <span class="hljs-comment">/*   0 */</span>
+  <span class="hljs-string">&quot;S (sleeping)&quot;</span>,        <span class="hljs-comment">/*   1 */</span>
+  <span class="hljs-string">&quot;D (disk sleep)&quot;</span>,    <span class="hljs-comment">/*   2 */</span>
+  <span class="hljs-string">&quot;T (stopped)&quot;</span>,        <span class="hljs-comment">/*   4 */</span>
+  <span class="hljs-string">&quot;t (tracing stop)&quot;</span>,    <span class="hljs-comment">/*   8 */</span>
+  <span class="hljs-string">&quot;X (dead)&quot;</span>,        <span class="hljs-comment">/*  16 */</span>
+  <span class="hljs-string">&quot;Z (zombie)&quot;</span>,        <span class="hljs-comment">/*  32 */</span>
+};
+</code></pre>
+<p>&#x8FD9;&#x771F;&#x7684;&#x662F;Linux&#x7684;&#x6E90;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x8FDB;&#x7A0B;&#x4E00;&#x5171;7&#x79CD;&#x72B6;&#x6001;&#xFF0C;&#x542B;&#x4E49;&#x4E5F;&#x6BD4;&#x8F83;&#x6E05;&#x6670;&#xFF0C;&#x6CE8;&#x610F;&#x5176;&#x4E2D;D(disk sleep)&#x79F0;&#x4E3A;&#x4E0D;&#x53EF;&#x4E2D;&#x65AD;&#x7761;&#x7720;&#x72B6;&#x6001;(uninterruptible sleep)&#x3002;</p>
+<p>&#x77E5;&#x9053;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x672C;&#x8EAB;&#x6CA1;&#x4EC0;&#x4E48;</p>
+<h2 id="&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x8F6C;&#x6362;">&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x8F6C;&#x6362;</h2>
+<p><img src="image/status_transform.svg" alt=""></p>
+<p><a href="https://idea.popcount.org/2012-12-11-linux-process-states/" target="_blank">&#x4F7F;&#x7528;Ptrace</a></p>
+<p><a href="https://github.com/torvalds/linux/blob/master/include%2Flinux%2Fsched.h" target="_blank">include/linux/sched.h</a></p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> task_struct {
+  <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">long</span> state;    <span class="hljs-comment">/* -1 unrunnable, 0 runnable, &gt;0 stopped */</span>
+  <span class="hljs-keyword">void</span> *<span class="hljs-built_in">stack</span>;
+  <span class="hljs-keyword">atomic_t</span> usage;
+  <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> flags;    <span class="hljs-comment">/* per process flags, defined below */</span>
+  <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> ptrace;
+</code></pre>
+<h2 id="&#x67E5;&#x770B;&#x72B6;&#x6001;">&#x67E5;&#x770B;&#x72B6;&#x6001;</h2>
+<p>&#x901A;&#x8FC7;<code>ps aux</code>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FDB;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<p>O&#xFF1A;&#x8FDB;&#x7A0B;&#x6B63;&#x5728;&#x5904;&#x7406;&#x5668;&#x8FD0;&#x884C;,&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x4ECE;&#x6765;&#x6CA1;&#x6709;&#x89C1;&#x8FC7;.<br>S&#xFF1A;&#x4F11;&#x7720;&#x72B6;&#x6001;&#xFF08;sleeping&#xFF09;<br>R&#xFF1A;&#x7B49;&#x5F85;&#x8FD0;&#x884C;&#xFF08;runable&#xFF09;R Running or runnable (on run queue) &#x8FDB;&#x7A0B;&#x5904;&#x4E8E;&#x8FD0;&#x884C;&#x6216;&#x5C31;&#x7EEA;&#x72B6;&#x6001;<br>I&#xFF1A;&#x7A7A;&#x95F2;&#x72B6;&#x6001;&#xFF08;idle&#xFF09;<br>Z&#xFF1A;&#x50F5;&#x5C38;&#x72B6;&#x6001;&#xFF08;zombie&#xFF09;<br>T&#xFF1A;&#x8DDF;&#x8E2A;&#x72B6;&#x6001;&#xFF08;Traced&#xFF09;<br>B&#xFF1A;&#x8FDB;&#x7A0B;&#x6B63;&#x5728;&#x7B49;&#x5F85;&#x66F4;&#x591A;&#x7684;&#x5185;&#x5B58;&#x9875;<br>D: &#x4E0D;&#x53EF;&#x4E2D;&#x65AD;&#x7684;&#x6DF1;&#x5EA6;&#x7761;&#x7720;&#xFF0C;&#x4E00;&#x822C;&#x7531;IO&#x5F15;&#x8D77;&#xFF0C;&#x540C;&#x6B65;IO&#x5728;&#x505A;&#x8BFB;&#x6216;&#x5199;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;cpu&#x4E0D;&#x80FD;&#x505A;&#x5176;&#x5B83;&#x4E8B;&#x60C5;&#xFF0C;&#x53EA;&#x80FD;&#x7B49;&#x5F85;&#xFF0C;&#x8FD9;&#x65F6;&#x8FDB;&#x7A0B;&#x5904;&#x4E8E;&#x8FD9;&#x79CD;&#x72B6;&#x6001;&#xFF0C;&#x5982;&#x679C;&#x7A0B;&#x5E8F;&#x91C7;&#x7528;&#x5F02;&#x6B65;IO&#xFF0C;&#x8FD9;&#x79CD;&#x72B6;&#x6001;&#x5E94;&#x8BE5;&#x5C31;&#x5F88;&#x5C11;&#x89C1;&#x5230;&#x4E86;  </p>
+<p>&#x5176;&#x4E2D;&#x5C31;&#x7EEA;&#x72B6;&#x6001;&#x8868;&#x793A;&#x8FDB;&#x7A0B;&#x5DF2;&#x7ECF;&#x5206;&#x914D;&#x5230;&#x9664;CPU&#x4EE5;&#x5916;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x7B49;CPU&#x8C03;&#x5EA6;&#x5B83;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x9A6C;&#x4E0A;&#x6267;&#x884C;&#x4E86;&#x3002;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x5C31;&#x662F;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x4E86;&#xFF0C;&#x83B7;&#x5F97;&#x5305;&#x62EC;CPU&#x5728;&#x5185;&#x7684;&#x6240;&#x6709;&#x8D44;&#x6E90;&#x3002;&#x7B49;&#x5F85;&#x72B6;&#x6001;&#x8868;&#x793A;&#x56E0;&#x7B49;&#x5F85;&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x800C;&#x6CA1;&#x6709;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x4E0D;&#x8017;CPU&#x65F6;&#x95F4;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x7B49;&#x5F85;IO&#x3001;&#x7533;&#x8BF7;&#x4E0D;&#x5230;&#x8DB3;&#x591F;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x6216;&#x8005;&#x5728;&#x7B49;&#x5F85;&#x4FE1;&#x53F7;&#x3002;</p>
+<h2 id="&#x72B6;&#x6001;&#x8F6C;&#x6362;">&#x72B6;&#x6001;&#x8F6C;&#x6362;</h2>
+<p>&#x8FDB;&#x7A0B;&#x7684;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E5F;&#x5C31;&#x662F;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x5C31;&#x7EEA;&#x72B6;&#x6001;&#x7684;&#x8FDB;&#x7A0B;&#x53EA;&#x8981;&#x7B49;&#x5230;CPU&#x8C03;&#x5EA6;&#x5B83;&#x65F6;&#x5C31;&#x9A6C;&#x4E0A;&#x8F6C;&#x4E3A;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x4E00;&#x65E6;&#x5B83;&#x9700;&#x8981;&#x7684;IO&#x64CD;&#x4F5C;&#x8FD8;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x65F6;&#xFF0C;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x4E5F;&#x5C31;&#x8F6C;&#x6362;&#x6210;&#x7B49;&#x5F85;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x95F4;&#x8F6C;&#x6362;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x4E00;&#x4E00;&#x7EC6;&#x53D9;&#xFF0C;&#x9A6C;&#x4E0A;&#x53BB;&#x5B66;&#x4E60;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x7801;&#x5427;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="the_more_the_better.html" class="navigation navigation-prev " aria-label="Previous page: 进程越多越好">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="exit_code.html" class="navigation navigation-next " aria-label="Next page: 退出码">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"进程状态","level":"1.2.11","depth":2,"next":{"title":"退出码","level":"1.2.12","depth":2,"path":"process_basic/exit_code.md","ref":"process_basic/exit_code.md","articles":[]},"previous":{"title":"进程越多越好","level":"1.2.10","depth":2,"path":"process_basic/the_more_the_better.md","ref":"process_basic/the_more_the_better.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"process_basic/status.md","mtime":"2018-01-28T13:39:42.925Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-01-28T13:56:38.461Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
